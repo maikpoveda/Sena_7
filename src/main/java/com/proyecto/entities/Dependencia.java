@@ -1,11 +1,15 @@
 package com.proyecto.entities;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-public class Dependencias {
+@Entity
+@Table( name = "DEPENDENCIAS" )
+public class Dependencia {
 	@Id 
 	@GeneratedValue( strategy = GenerationType.IDENTITY ) 
 	@Column( name = "ID_DEPENDENCIA", nullable = false ) 
@@ -59,5 +63,13 @@ public class Dependencias {
 	
 	public void setEstado( boolean estado ) { 
 		this.estado = estado; 
+	}
+
+	@Override
+	public String toString() {
+		return "Dependencia [id=" + id + ", codigo=" + codigo + ", descripcion=" + descripcion + ", cargo=" + cargo
+				+ ", estado=" + estado + "]";
 	} 
+	
+	
 }
