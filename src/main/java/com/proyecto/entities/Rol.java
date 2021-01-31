@@ -18,7 +18,7 @@ public class Rol implements Serializable{
 	private int id; 
 	 
 	private String descripcion; 
-	
+	 
 	private String siglaRol; 
 	
 	private boolean estado; 
